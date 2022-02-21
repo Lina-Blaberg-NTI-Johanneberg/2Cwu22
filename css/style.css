@@ -1,0 +1,103 @@
+/*Gemensamt*/
+body {
+    margin: 0;
+}
+
+#container {
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 6rem 2rem 1fr 3rem;
+    grid-template-areas:
+    'hd'
+    'nv'
+    'mn'
+    'ft'
+}
+
+header {
+    grid-area: hd;
+    background-color: aqua;
+}
+
+nav {
+    grid-area: nv;
+    background-color: aquamarine;
+}
+
+main {
+    grid-area: mn;
+    background-color: cadetblue;
+}
+
+footer {
+    grid-area: ft;
+    background-color: cyan;
+}
+
+.spons {
+    grid-area: as;
+    background-color: darkgray;
+}
+
+/*index.html*/
+#indexmain {
+    display: grid;
+    grid-template-columns: 50% 30% 20%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    'nse na as'
+    'nse la as'
+    'nse limg as'
+}
+
+#nyhetse {
+    grid-area: nse;
+    background-color: darkblue;
+}
+
+.nextmatch {
+    grid-area: na;
+    background-color: darkcyan;
+}
+
+.lastmatch {
+    grid-area: la;
+    background-color: darkslateblue;
+}
+
+.lagetbild {
+    grid-area: limg;
+    background-color: dodgerblue;
+}
+
+/*kalender.html*/
+#kalendermain {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 5rem 1fr;
+    grid-template-areas:
+    'ta as'
+    'ka as'
+}
+
+#text {
+    grid-area: ta;
+    background-color: indigo;
+}
+
+#kalender {
+    grid-area: ka;
+    background-color: lightblue;
+}
+
+/*laget.html*/
+
+/*serie.html*/
+
+/*index mobil*/
+
+/*kalender mobil*/
+
+/*laget mobil*/
+
+/*serie mobil*/
