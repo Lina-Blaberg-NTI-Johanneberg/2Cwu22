@@ -5,13 +5,15 @@ body {
 
 #container {
     width: 100vw;
+    min-height: 100vh;
     display: grid;
+    grid-template-columns: 83% 17%;
     grid-template-rows: 6rem 2rem 1fr 3rem;
     grid-template-areas:
-    'hd'
-    'nv'
-    'mn'
-    'ft'
+    'hd hd'
+    'nv nv'
+    'mn as'
+    'ft ft'
 }
 
 header {
@@ -26,7 +28,7 @@ nav {
 
 main {
     grid-area: mn;
-    background-color: cadetblue;
+    background-color: rgb(95, 112, 160);
 }
 
 footer {
@@ -37,22 +39,6 @@ footer {
 .spons {
     grid-area: as;
     background-color: darkgray;
-}
-
-/*index.html*/
-#indexmain {
-    display: grid;
-    grid-template-columns: 50% 30% 20%;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-    'nse na as'
-    'nse la as'
-    'nse limg as'
-}
-
-#nyhetse {
-    grid-area: nse;
-    background-color: darkblue;
 }
 
 .nextmatch {
@@ -70,14 +56,29 @@ footer {
     background-color: dodgerblue;
 }
 
+/*index.html*/
+#indexmain {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 11rem 11rem 1fr;
+    grid-template-areas:
+    'nse na'
+    'nse la'
+    'nse limg'
+}
+
+#nyhetse {
+    grid-area: nse;
+    background-color: darkblue;
+}
+
 /*kalender.html*/
 #kalendermain {
     display: grid;
-    grid-template-columns: 80% 20%;
     grid-template-rows: 5rem 1fr;
     grid-template-areas:
-    'ta as'
-    'ka as'
+    'ta'
+    'ka'
 }
 
 #text {
@@ -87,12 +88,58 @@ footer {
 
 #kalender {
     grid-area: ka;
-    background-color: lightblue;
+    background-color: cornsilk;
+    width: 100%;
 }
 
 /*laget.html*/
+#lagetmain {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 11rem 1fr 1fr 1fr;
+    grid-template-areas:
+    'na us'
+    'limg us'
+    'limg ms'
+    'limg ts'
+}
+
+#seutespel {
+    grid-area: us;
+    background-color: beige;
+}
+
+#semålvakt {
+    grid-area: ms;
+    background-color: rgb(220, 245, 224);
+}
+
+#setränar {
+    grid-area: ts;
+    background-color: rgb(220, 245, 244);
+}
 
 /*serie.html*/
+#seriemain {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 5.5rem 5.5rem 11rem 1fr;
+    grid-template-areas:
+    'na sn'
+    'na res'
+    'la res'
+    '. res'
+}
+
+#serienamn {
+    grid-area: sn;
+    background-color: blue;
+}
+
+#resultat {
+    grid-area: res;
+    background-color: cadetblue;
+}
 
 /*index mobil*/
 
