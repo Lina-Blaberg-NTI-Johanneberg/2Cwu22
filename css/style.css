@@ -75,7 +75,7 @@ footer {
 /*kalender.html*/
 #kalendermain {
     display: grid;
-    grid-template-rows: 5rem 1fr;
+    grid-template-rows: 4rem 1fr;
     grid-template-areas:
     'ta'
     'ka'
@@ -90,6 +90,10 @@ footer {
     grid-area: ka;
     background-color: cornsilk;
     width: 100%;
+}
+
+#nextundantag {
+    display: none;
 }
 
 /*laget.html*/
@@ -142,9 +146,76 @@ footer {
 }
 
 /*index mobil*/
+@media screen and (max-width: 500px) {
+    #indexmain {
+        width: 100vw;
+        grid-template-rows: 8rem 10fr 10rem 9fr;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'na'
+        'nse'
+        'la'
+        'limg'
+    }
+    .spons {
+        display: none;
+    }
+}
 
 /*kalender mobil*/
+@media screen and (max-width: 500px) {
+    #kalendermain {
+        width: 100vw;
+        grid-template-rows: 8rem 1fr;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'na'
+        'ka'
+    }
+    .spons {
+        display: none;
+    }
+    #text {
+        display: none;
+    }
+    #nextundantag {
+        display: block;
+    }
+}
 
 /*laget mobil*/
+@media screen and (max-width: 500px) {
+    #lagetmain {
+        width: 100vw;
+        grid-template-rows: 8rem 1fr 1fr 1fr 1fr;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'na'
+        'limg'
+        'us'
+        'ms'
+        'ts'
+    }
+    .spons {
+        display: none;
+    }
+}
 
 /*serie mobil*/
+@media screen and (max-width: 500px) {
+    #seriemain {
+        width: 100vw;
+        grid-template-rows: 8rem 1fr 1fr;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'na'
+        'sn'
+        'res'
+    }
+    .spons {
+        display: none;
+    }
+    .lastmatch {
+        display: none;
+    }
+}
