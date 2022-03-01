@@ -34,6 +34,8 @@ main {
 footer {
     grid-area: ft;
     background-color: cyan;
+    display: flex;
+    align-items: center;
 }
 
 .spons {
@@ -94,6 +96,12 @@ footer {
 
 #nextundantag {
     display: none;
+}
+
+#mobilkalender {
+    display: none;
+    width: 100%;
+    background-color: cornsilk;
 }
 
 /*laget.html*/
@@ -179,6 +187,12 @@ footer {
         display: none;
     }
     #nextundantag {
+        display: block;
+    }
+    #kalender {
+        display: none;
+    }
+    #mobilkalender {
         display: block;
     }
 }
