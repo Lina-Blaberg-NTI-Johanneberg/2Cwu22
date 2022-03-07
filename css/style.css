@@ -102,6 +102,7 @@ footer {
     display: none;
     width: 100%;
     background-color: cornsilk;
+    grid-area: mk;
 }
 
 /*laget.html*/
@@ -178,7 +179,7 @@ footer {
         grid-template-columns: 100%;
         grid-template-areas:
         'na'
-        'ka'
+        'mk'
     }
     .spons {
         display: none;
