@@ -62,25 +62,24 @@ footer {
 
 .nextmatch {
     grid-area: na;
-    background-color: darkcyan;
+    background-color: rgb(221, 233, 238);
     text-align: center;
     font-family: 'Merriweather', serif;
     font-size: 1rem;
     padding-top: 1.2rem;
+    margin: 0.5rem;
+    border-radius: 2rem;
 }
 
 .lastmatch {
     grid-area: la;
-    background-color: darkslateblue;
+    background-color: rgb(221, 233, 238);
     text-align: center;
     font-family: 'Merriweather', serif;
     font-size: 1rem;
     padding-top: 0.3rem;
-}
-
-.lagetbild {
-    grid-area: limg;
-    background-color: dodgerblue;
+    margin: 0.5rem;
+    border-radius: 2rem;
 }
 
 /*index.html*/
@@ -91,17 +90,16 @@ footer {
     grid-template-areas:
     'nse na'
     'nse la'
-    'nse limg'
+    'nse .'
 }
 
 #nyhetse {
     grid-area: nse;
-    background-color: darkblue;
+    margin: 0.5rem;
 }
 
 #nyhets_bild {
-    width: 100px;
-    height: 100px;
+    width: 100%;
 }
 
 .fade {
@@ -163,11 +161,11 @@ footer {
 }
 
 .kalrad:nth-child(even) {
-    background-color: rgb(218, 239, 245);
+    background-color: rgb(213, 241, 248);
 }
 
 .kalrad:nth-child(odd) {
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(199, 234, 243);
 }
 
 .kalcol:first-child {
@@ -184,45 +182,126 @@ footer {
 
 #mobilkalender {
     display: none;
-    width: 100%;
-    background-color: cornsilk;
     grid-area: mk;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+}
+
+.mobcol {
+    text-align: center;
+    height: 2rem;
+    width: 6rem;
+    vertical-align: middle;
+}
+
+.mobcol:nth-child(3) {
+    width: 50%;
+}
+
+.mobrad:nth-child(even) {
+    background-color: rgb(213, 241, 248);
+}
+
+.mobrad:nth-child(odd) {
+    background-color: rgb(199, 234, 243);
+}
+
+.mobcol:first-child {
+    font-weight: bold;
+}
+
+.mobrad:first-child {
+    font-weight: bold;
 }
 
 /*laget.html*/
 #lagetmain {
     display: grid;
     grid-template-columns: 35% 65%;
-    grid-template-rows: 11rem 1fr 1fr 1fr;
+    grid-template-rows: 11rem 16rem 2rem 1fr 2fr;
     grid-template-areas:
     'na us'
     'limg us'
     'limg ms'
-    'limg ts'
+    '. ms'
+    '. ts'
 }
 
-#seutespel {
+#utespel {
     grid-area: us;
-    background-color: beige;
+    background-color: rgb(183, 234, 250);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.3rem;
+    margin: 0.5rem;
 }
 
-#semålvakt {
+#målvakt {
     grid-area: ms;
-    background-color: rgb(220, 245, 224);
+    background-color: rgb(183, 234, 250);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.3rem;
+    margin: 0.5rem;
 }
 
-#setränar {
+#tränar {
     grid-area: ts;
-    background-color: rgb(220, 245, 244);
+    background-color: rgb(183, 234, 250);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.3rem;
+    margin: 0.5rem;
+}
+
+.lagetbild {
+    grid-area: limg;
+    background-color: dodgerblue;
+    border-radius: 2rem;
+    margin: 0.5rem;
+}
+
+.utecol {
+    height: 3rem;
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.målcol {
+    height: 3rem;
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.träcol {
+    height: 3rem;
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.spelarbild {
+    height: 45px;
+    width: 45px;
+}
+
+.undantagspelare {
+    display: none;
+    grid-area: unds;
+    margin: 0.5rem;
+    padding-left: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.1rem;
+    background-color: rgb(183, 234, 250);
+}
+
+.undpara {
+    padding: 0.3rem;
 }
 
 /*serie.html*/
 #seriemain {
     display: grid;
     grid-template-columns: 35% 65%;
-    grid-template-rows: 5.5rem 5.5rem 11rem 1fr;
+    grid-template-rows: 4rem 11rem 11rem 1fr;
     grid-template-areas:
-    'na sn'
+    '. sn'
     'na res'
     'la res'
     '. res'
@@ -230,8 +309,7 @@ footer {
 
 #serienamn {
     grid-area: sn;
-    font-size: 1.8rem;
-    padding-left: 1.5rem;
+    font-size: 1.5rem;
     font-family: 'Merriweather', serif;
     display: flex;
     align-items: center;
@@ -257,11 +335,11 @@ footer {
 }
 
 .serrad:nth-child(even) {
-    background-color: rgb(218, 239, 245);
+    background-color: rgb(213, 241, 248);
 }
 
 .serrad:nth-child(odd) {
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(199, 234, 243);
 }
 
 .sercol:first-child {
@@ -272,35 +350,40 @@ footer {
     font-weight: bold;
 }
 
-/*index mobil*/
 @media screen and (max-width: 500px) {
+    /*Allmänt på varje sida*/ 
+    .spons {
+        display: none;
+    }
+    footer {
+        padding: 0;
+    }
+    header {
+        font-size: 2.5rem;
+    }
+    .trän {
+        display: none;
+    }
+
+    /*index.html för mobil*/
     #indexmain {
         width: 100vw;
-        grid-template-rows: 8rem 10fr 10rem 9fr;
+        grid-template-rows: 10.5rem 1fr 11rem;
         grid-template-columns: 100%;
         grid-template-areas:
         'na'
         'nse'
         'la'
-        'limg'
     }
-    .spons {
-        display: none;
-    }
-}
 
-/*kalender mobil*/
-@media screen and (max-width: 500px) {
+    /*kalender.html för mobil*/
     #kalendermain {
         width: 100vw;
-        grid-template-rows: 8rem 1fr;
+        grid-template-rows: 10.5rem 1fr;
         grid-template-columns: 100%;
         grid-template-areas:
         'na'
         'mk'
-    }
-    .spons {
-        display: none;
     }
     #text {
         display: none;
@@ -314,41 +397,49 @@ footer {
     #mobilkalender {
         display: block;
     }
-}
 
-/*laget mobil*/
-@media screen and (max-width: 500px) {
+    /*laget.html för mobil*/
     #lagetmain {
         width: 100vw;
-        grid-template-rows: 8rem 1fr 1fr 1fr 1fr;
+        grid-template-rows: 10.5rem 18rem 1fr;
         grid-template-columns: 100%;
         grid-template-areas:
         'na'
         'limg'
-        'us'
-        'ms'
-        'ts'
+        'unds'
     }
-    .spons {
+    .undantagspelare {
+        display: block;
+    }
+    #utespel {
         display: none;
     }
-}
 
-/*serie mobil*/
-@media screen and (max-width: 500px) {
+    #målvakt {
+        display: none;
+    }
+
+    #tränar {
+        display: none;
+    }
+
+    /*serie.html för mobil*/
     #seriemain {
         width: 100vw;
-        grid-template-rows: 8rem 1fr 1fr;
+        grid-template-rows: 10.5rem 1fr 8fr;
         grid-template-columns: 100%;
         grid-template-areas:
         'na'
         'sn'
         'res'
     }
-    .spons {
+    #lastundantag {
         display: none;
     }
-    .lastmatch {
+    #serienamn {
+        justify-content: center;
+    }
+    .tabellundantag {
         display: none;
     }
 }
