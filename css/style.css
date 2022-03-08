@@ -18,39 +18,64 @@ body {
 
 header {
     grid-area: hd;
-    background-color: aqua;
+    background-color: rgb(91, 223, 247);
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'Roboto Slab', serif;
 }
 
 nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     grid-area: nv;
-    background-color: aquamarine;
+    background-color: rgb(13, 31, 65);
+    font-family: 'Merriweather', serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
 main {
     grid-area: mn;
-    background-color: rgb(95, 112, 160);
+    background-color: rgb(91, 223, 247);
 }
 
 footer {
     grid-area: ft;
-    background-color: cyan;
+    background-color: rgb(91, 223, 247);
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-right: 8rem;
+    padding-left: 8rem;
 }
 
 .spons {
     grid-area: as;
-    background-color: darkgray;
+    background-color: rgb(91, 223, 247);
 }
 
 .nextmatch {
     grid-area: na;
     background-color: darkcyan;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    padding-top: 1.2rem;
 }
 
 .lastmatch {
     grid-area: la;
     background-color: darkslateblue;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    padding-top: 0.3rem;
 }
 
 .lagetbild {
@@ -74,10 +99,39 @@ footer {
     background-color: darkblue;
 }
 
+#nyhets_bild {
+    width: 100px;
+    height: 100px;
+}
+
+.fade {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function:
+    ease-in;
+    animation-duration: 5s;
+}
+
+@keyframes fadeInOpacity {
+    0%{
+        opacity: 0%;
+    }
+    10%{
+        opacity: 100%;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    } 
+}
+
 /*kalender.html*/
 #kalendermain {
     display: grid;
-    grid-template-rows: 4rem 1fr;
+    grid-template-rows: 3.5rem 1fr;
     grid-template-areas:
     'ta'
     'ka'
@@ -85,13 +139,43 @@ footer {
 
 #text {
     grid-area: ta;
-    background-color: indigo;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 0;
+    padding-left: 1rem;
+    font-family: 'Merriweather', serif;
 }
 
 #kalender {
     grid-area: ka;
-    background-color: cornsilk;
-    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.kalcol {
+    text-align: center;
+    height: 3rem;
+    vertical-align: text-top;
+}
+
+.kalcol, .kalrad {
+    padding-top: 1rem;
+}
+
+.kalrad:nth-child(even) {
+    background-color: rgb(218, 239, 245);
+}
+
+.kalrad:nth-child(odd) {
+    background-color: rgb(214, 214, 214);
+}
+
+.kalcol:first-child {
+    font-weight: bold;
+}
+
+.kalrad:first-child {
+    font-weight: bold;
 }
 
 #nextundantag {
@@ -146,12 +230,46 @@ footer {
 
 #serienamn {
     grid-area: sn;
-    background-color: blue;
+    font-size: 1.8rem;
+    padding-left: 1.5rem;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    align-items: center;
 }
 
 #resultat {
     grid-area: res;
-    background-color: cadetblue;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.sercol {
+    text-align: center;
+    height: 3rem;
+    width: auto;
+    vertical-align: middle;
+}
+
+.sercol, .serrad {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.serrad:nth-child(even) {
+    background-color: rgb(218, 239, 245);
+}
+
+.serrad:nth-child(odd) {
+    background-color: rgb(214, 214, 214);
+}
+
+.sercol:first-child {
+    font-weight: bold;
+}
+
+.serrad:first-child {
+    font-weight: bold;
 }
 
 /*index mobil*/
