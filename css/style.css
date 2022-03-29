@@ -31,6 +31,17 @@ footer, #kalender, #mobilkalender, #utespel, #målvakt, #tränar, .undantagspela
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+/*Allt med "annan styleing"*/
+header, nav, footer, #text, #serienamn {
+    align-items: center;
+}
+.nextmatch, .lastmatch, .kalcol, .mobcol, .sercol {
+    text-align: center;
+}
+.kalcol:first-child, .kalrad:first-child, .mobcol:first-child, .mobrad:first-child, .sercol:first-child, .serrad:first-child {
+    font-weight: bold;
+}
+
 /*Gemensamt*/
 body {
     margin: 0;
@@ -49,7 +60,6 @@ body {
 header {
     grid-area: hd;
     font-family: 'Roboto Slab', serif;
-    align-items: center;
     font-size: 3rem;
 }
 .klubblogga {
@@ -58,7 +68,6 @@ header {
 }
 nav {
     justify-content: space-around;
-    align-items: center;
     grid-area: nv;
     background-color: rgb(13, 31, 65);
 }
@@ -71,7 +80,6 @@ main {
 }
 footer {
     grid-area: ft;
-    align-items: center;
     justify-content: space-around;
     padding-right: 8rem;
     padding-left: 8rem;
@@ -82,12 +90,11 @@ footer {
 }
 .nextmatch, .lastmatch {
     background-color: rgb(221, 233, 238);
-    text-align: center;
     font-size: 1rem;
     margin: 0.5rem;
     border-radius: 2rem;
     border: 1px solid  rgb(109, 109, 109);
-    box-shadow: 1px 1px 10px;
+    box-shadow: 0.5px 0.5px 8px rgb(92, 92, 92);
 }
 .nextmatch {
     grid-area: na;
@@ -97,21 +104,16 @@ footer {
     grid-area: la;
     padding-top: 0.3rem;
 }
-.spons1 {
-    width: 11rem;
-}
-.spons2 {
+.spons1, .spons2, .spons5 {
     width: 11rem;
 }
 .spons3 {
-    width: 5rem;
     padding-left: 0.3rem;
 }
-.spons4 {
+.spons4, .spons3 {
     width: 5rem;
 }
 .spons5 {
-    width: 11rem;
     padding-bottom: 0.3rem;
 }
 
@@ -163,7 +165,6 @@ footer {
 }
 #text {
     grid-area: ta;
-    align-items: center;
     font-size: 1.5rem;
     margin: 0;
     padding-left: 1rem;
@@ -172,22 +173,17 @@ footer {
     grid-area: ka;
 }
 .kalcol {
-    text-align: center;
     height: 3rem;
     vertical-align: text-top;
 }
 .kalcol, .kalrad {
     padding-top: 1rem;
 }
-.kalcol:first-child, .kalrad:first-child, .mobcol:first-child, .mobrad:first-child {
-    font-weight: bold;
-}
 #mobilkalender {
     grid-area: mk;
     font-size: 1rem;
 }
 .mobcol {
-    text-align: center;
     height: 2rem;
     width: 6rem;
     vertical-align: middle;
@@ -207,20 +203,18 @@ footer {
     '. ms'
     '. ts'
 }
-#utespel {
-    grid-area: us;
+#utespel, #målvakt, #tränar {
     font-size: 1.3rem;
     margin: 0.5rem;
+}
+#utespel {
+    grid-area: us;
 }
 #målvakt {
     grid-area: ms;
-    font-size: 1.3rem;
-    margin: 0.5rem;
 }
 #tränar {
     grid-area: ts;
-    font-size: 1.3rem;
-    margin: 0.5rem;
 }
 .lagbild {
     grid-area: limg;
@@ -228,24 +222,10 @@ footer {
     margin: 0.5rem;
     width: 96%;
 }
-.utecol {
+.utecol, .målcol, .träcol {
     height: 3rem;
     width: 50%;
     padding-left: 2rem;
-}
-.målcol {
-    height: 3rem;
-    width: 50%;
-    padding-left: 2rem;
-}
-.träcol {
-    height: 3rem;
-    width: 50%;
-    padding-left: 2rem;
-}
-.spelarbild {
-    height: 45px;
-    width: 45px;
 }
 .undantagspelare {
     grid-area: unds;
@@ -270,13 +250,11 @@ footer {
 #serienamn {
     grid-area: sn;
     font-size: 1.5rem;
-    align-items: center;
 }
 #resultat {
     grid-area: res;
 }
 .sercol {
-    text-align: center;
     height: 3rem;
     width: auto;
     vertical-align: middle;
@@ -286,9 +264,6 @@ footer {
     padding-bottom: 0.4rem;
     padding-left: 1rem;
     padding-right: 1rem;
-}
-.sercol:first-child, .serrad:first-child {
-    font-weight: bold;
 }
 
 @media screen and (max-width: 500px) {
